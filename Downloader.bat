@@ -16,14 +16,9 @@ IF EXIST "%filepath%" GOTO :ALREADYEXISTS
 curl.exe --location --request GET "https://sourceforge.net/projects/systeminformer/files/systeminformer-3.2.25011-release-setup.exe/download" --output "%filepath%" >NUL 2>&1
 IF NOT EXIST "%filepath%" GOTO :FAILED
 echo Successfully downloaded %filepath%.
-SET filepath=C:\Users\%Username%\Downloads\SS\timelineexplorer.zip
-IF EXIST "%filepath%" GOTO :ALREADYEXISTS
-curl.exe --output "%filepath%" --url "https://download.ericzimmermanstools.com/net9/TimelineExplorer.zip" >NUL 2>&1
-IF NOT EXIST "%filepath%" GOTO :FAILED
-echo Successfully downloaded %filepath%.
 SET filepath=C:\Users\%Username%\Downloads\SS\bamparser.exe
 IF EXIST "%filepath%" GOTO :ALREADYEXISTS
-curl.exe --location --request GET "https://github.com/spokwn/BAM-parser/releases/download/v1.2.7/BAMParser.exe" --output "%filepath%" >NUL 2>&1
+curl.exe --location --request GET "https://github.com/spokwn/BAM-parser/releases/download/v1.2.9/BAMParser.exe" --output "%filepath%" >NUL 2>&1
 IF NOT EXIST "%filepath%" GOTO :FAILED
 echo Successfully downloaded %filepath%.
 SET filepath=C:\Users\%Username%\Downloads\SS\spokwnjournal.exe
@@ -33,7 +28,12 @@ IF NOT EXIST "%filepath%" GOTO :FAILED
 echo Successfully downloaded %filepath%.
 SET filepath=C:\Users\%Username%\Downloads\SS\pathsparser.exe
 IF EXIST "%filepath%" GOTO :ALREADYEXISTS
-curl.exe --location --request GET "https://github.com/spokwn/PathsParser/releases/download/v1.1/PathsParser.exe" --output "%filepath%" >NUL 2>&1
+curl.exe --location --request GET "https://github.com/spokwn/PathsParser/releases/download/v1.1.1/PathsParser.exe" --output "%filepath%" >NUL 2>&1
+IF NOT EXIST "%filepath%" GOTO :FAILED
+echo Successfully downloaded %filepath%.
+SET filepath=C:\Users\%Username%\Downloads\SS\toolthing.exe
+IF EXIST "%filepath%" GOTO :ALREADYEXISTS
+curl.exe --location --request GET "https://github.com/spokwn/Tool/releases/download/v1.0/espoukenBitrate.exe" --output "%filepath%" >NUL 2>&1
 IF NOT EXIST "%filepath%" GOTO :FAILED
 echo Successfully downloaded %filepath%.
 SET filepath=C:\Users\%Username%\Downloads\SS\newmaceta.exe
@@ -54,6 +54,11 @@ echo Successfully downloaded %filepath%.
 SET filepath=C:\Users\%Username%\Downloads\SS\SrumECmd.zip
 IF EXIST "%filepath%" GOTO :ALREADYEXISTS
 curl.exe --output "%filepath%" --url "https://download.ericzimmermanstools.com/SrumECmd.zip" >NUL 2>&1
+IF NOT EXIST "%filepath%" GOTO :FAILED
+echo Successfully downloaded %filepath%.
+SET filepath=C:\Users\%Username%\Downloads\SS\timelineexplorer.zip
+IF EXIST "%filepath%" GOTO :ALREADYEXISTS
+curl.exe --output "%filepath%" --url "https://download.ericzimmermanstools.com/net9/TimelineExplorer.zip" >NUL 2>&1
 IF NOT EXIST "%filepath%" GOTO :FAILED
 echo Successfully downloaded %filepath%.
 SET filepath=C:\Users\%Username%\Downloads\SS\hayabusa.zip
